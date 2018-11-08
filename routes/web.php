@@ -13,7 +13,7 @@
 use GuzzleHttp\Client;
 
 
-Route::get('/', function () {
+Route::get('/usuario', function () {
 
 
 
