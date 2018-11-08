@@ -83,11 +83,11 @@
                 <td><a href="{{route('transacciones.show',$p->id)}} "><button class="btn btn-success">Realizar Transferencia</button></a></td>
                 @endif
                 @if($p->type == 'CTD')
-                  <td><a href="{{route('transacciones.show',$p->id)}} "><button class="btn btn-info">Historial Transacciones</button></a></td>
+                  <td><a href="{{route('transacciones.show',$p->id)}} "><button class="btn btn-warning">Historial Transacciones</button></a></td>
                   <td><a href="{{route('transacciones.show',$p->id)}} "><button class="btn btn-success">Realizar Transferencia</button></a></td>
                 @endif
                 @if($p->type == 'TDC')
-                  <td><a href="{{route('tarjetadecredito.show',$p->id)}}"><button class="btn btn-info">Mis Transacciones</button></a></td>
+                  <td><a href="{{route('tarjetadecredito.show',$p->id)}}"><button class="btn btn-primary">Mis Transacciones</button></a></td>
                 @endif
               </tr> 
 

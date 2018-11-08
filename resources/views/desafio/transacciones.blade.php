@@ -109,6 +109,7 @@
   </head>
   <body>
     <div id="piechart" style="width: 900px; height: 500px;"></div>
+    <a href="/usuarios"><button class="btn btn-danger">Regresar</button></a>
   </body>
 </html>
 
