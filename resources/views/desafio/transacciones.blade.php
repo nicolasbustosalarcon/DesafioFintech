@@ -14,9 +14,7 @@
           <div class="panel-body">
           <TABLE class="table">
            <thead>  
-            <th>id</th> 
-            <th>Origin</th>  
-            <th>Destination</th>  
+            <th>id</th>
             <th>Amount</th>  
             <th>InitAmount</th> 
             <th>FinalAmount</th> 
@@ -27,7 +25,6 @@
             @foreach($post as $p)
               <tr>             
                 <td>{{ $p->id }}</td>
-                <td>{{ $p->origin }}</td>
                 <td>{{ $p->amount }}</td>
 
                 <td>{{ $p->initAmount }}</td>
