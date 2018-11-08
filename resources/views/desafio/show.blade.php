@@ -36,7 +36,7 @@
                   <td><a href="{{route('transacciones.show',$p->id)}} "><button class="btn btn-denger">Historial Transacciones</button></a></td>
                 @endif
                 @if($p->type == 'TDC')
-                  <td><button class="btn btn-denger">Mis Transacciones</button></a></td>
+                  <td><a href="{{route('tarjetadecredito.show',$p->id)}}"><button class="btn btn-denger">Mis Transacciones</button></a></td>
                 @endif
               </tr> 
 

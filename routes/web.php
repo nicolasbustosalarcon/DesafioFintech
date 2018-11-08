@@ -22,6 +22,7 @@ route::get('/usuarios/{rut}','PostsController@show');
 
 route::resource('/transacciones','TransaccionesController');
 
+route::resource('/tarjetadecredito','TarjetadeCreditoController');
 
 
 Route::get('/inicio', function () {

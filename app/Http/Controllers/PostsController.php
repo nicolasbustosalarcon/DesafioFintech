@@ -20,6 +20,7 @@ class PostsController extends Controller
 
 		$all = json_decode($response->getBody()->getContents() );
 
+
 	    return view('desafio.index', compact('all'));
 	}
 
@@ -34,6 +35,7 @@ class PostsController extends Controller
 
 		$response = $client->request('GET', "{$id}/products");
 
+		
 		$post = json_decode($response->getBody()->getContents() );
 		return view('desafio.show', compact('post'));
 	}
