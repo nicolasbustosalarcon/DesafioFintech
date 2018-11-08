@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -7,10 +8,10 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
+        <!--Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
+        <!--Styles-->
         <style>
             html, body {
                 background-color: #fff;
@@ -39,6 +40,8 @@
                 position: absolute;
                 right: 10px;
                 top: 18px;
+                text-align: center;
+
             }
 
             .content {
@@ -65,32 +68,23 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
+        
+        <div class="flex-center position-ref full-height " style="background: url(/images/fondo.png) no-repeat left center; background-size:;">
 
+            <div class="top-right">
+                <img src="/images/400x320.jpg" class="rounded mx-auto d-block" style="width:178px!important; height:138px !important">
+
+            
+            </div>
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <h1><a href="/usuarios" >Usuarios</a></h1>
+
                 </div>
             </div>
         </div>
     </body>
 </html>
+
+
+
