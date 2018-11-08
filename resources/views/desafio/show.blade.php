@@ -12,12 +12,27 @@
     <h1>Productos del RUT </h1>
         <div class="panel panel-default">
           <div class="panel-body">
-           	{{$post->id}}
-           	{{$post->amount}}
-			{{$post->type}}
-           	{{$post->status}}
-           	{{$post->limitAmount}}
+          <TABLE class="table">
+           <thead>	
+            <th>id</th> 
+            <th>Monto</th>  
+            <th>Tipo de Cuenta</th>  
+            <th>Estado</th>  
+            <th>Limite</th>   
+            </thead>
+            <tbody>
+            @foreach($post as $p)
+              <tr>             
+                <td>{{ $p->id }}</td>
+                <td>{{ $p->amount }}</td>
+                <td>{{ $p->type }}</td>
+                <td>{{ $p->status }}</td>
+                <td>{{ $p->limitAmount }}</td>
+              </tr> 
 
+            </tbody>
+            @endforeach
+            </TABLE>
           </div>
       </div>
   </div>

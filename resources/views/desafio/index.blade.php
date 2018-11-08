@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -25,3 +25,28 @@
 
 </body>
 </html>
+-->
+
+@extends ('layouts.app')
+
+@section ('titulo', 'Usuarios')
+
+@section('content')
+  <div class="row">
+      <table class="table table-striped">
+        <thead>
+          <th>Rut</th>
+          <th>Nombre</th>
+        </thead>
+        <tbody>
+          @foreach($all as $a)
+            <tr>
+                <td><a href="{{route('usuario.show',$a->rut)}} ">{{ $a->rut }}</a></td>
+                <td>{{ $a->fullName }}</td>
+            </tr>
+          @endforeach
+        </tbody>
+      </table>
+      
+  </div>
+@endsection
