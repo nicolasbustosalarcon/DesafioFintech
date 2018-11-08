@@ -29,3 +29,7 @@ Route::get('/', function () {
 
     return view('desafio.index', compact('all'));
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
