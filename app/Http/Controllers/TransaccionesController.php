@@ -19,6 +19,17 @@ class TransaccionesController extends Controller
 		$response = $client->request('GET', "{$id}");
 
 		$post = json_decode($response->getBody()->getContents() );
-		return view('desafio.transacciones', compact('post'));
+		$contador_ingreso = 0;
+		$contador_egreso = 0;
+
+		foreach ($post as $p) {
+			if (strcmp($p->type, 'INGRESO')) {
+				$contador_ingreso = $contador_ingreso + $p->amount;
+			}
+			if (strcmp($p->type, 'EGRESO')) {
+				$contador_egreso = $contador_egreso + $p->amount;
+			}
+		}
+		return view('desafio.transacciones', compact('post','contador_ingreso','contador_egreso'));
 	}
 }
