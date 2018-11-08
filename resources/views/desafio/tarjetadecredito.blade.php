@@ -71,7 +71,6 @@
           <TABLE class="table">
            <thead>  
 
-            <th>id</th>
             <th>Producto</th>  
             <th>productAgency</th> 
             <th>quota</th> 
@@ -88,7 +87,6 @@
             <tbody>
             @foreach($post as $p)
               <tr>             
-                <td>{{ $p->id }}</td>
                 <td>{{ $p->product }}</td>
                 <td>{{ $p->productAgency }}</td>
                 <td>{{ $p->quota }}</td>

@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 class PostsController extends Controller
 {
 
-	public function index(){ 		
+	public function index(Request $request){ 		
+
+		//dd($request->get('rut'));
 	    $client = new Client([
 	    // Base URI is used with relative requests
 	    'base_uri' => 'http://apifintech-team1.3it.cl/hackathon/clients/',
@@ -19,9 +21,20 @@ class PostsController extends Controller
 		$response = $client->request('GET', 'all');
 
 		$all = json_decode($response->getBody()->getContents() );
+		$numero =count($all);
 
-
+		if ($request)
+        {
+            $query=trim($request->get('searchText'));//Se obtiene la busqueda por parte del usuario
+            foreach($all as $a){
+            	if ($a->rut == $query) {
+            		$rut = $query;	
+            		return view('desafio.busqueda',['rut'=>$rut], compact('all'));
+            	}
+            }
+        }
 	    return view('desafio.index', compact('all'));
+
 	}
 
 

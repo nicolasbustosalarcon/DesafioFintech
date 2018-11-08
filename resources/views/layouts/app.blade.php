@@ -44,7 +44,6 @@
         </nav>
         <div class="container border">
             <main class="py-4">
-                
                 @yield('content')
             </main>
         </div>
