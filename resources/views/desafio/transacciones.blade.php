@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Productos del RUT </h1>
+    <h1>Transacciones del RUT </h1>
         <div class="panel panel-default">
           <div class="panel-body">
           <TABLE class="table">
@@ -29,6 +29,8 @@
 
                 <td>{{ $p->initAmount }}</td>
                 <td>{{ $p->finalAmount }}</td>
+                <td>{{ $p->transactionDate }}</td>
+                <td>{{ $p->type }}</td>
                 
               </tr> 
 
