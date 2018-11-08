@@ -9,19 +9,18 @@
 </head>
 <body>
   <div class="container">
-    <h1>Usuarios</h1>
-        @foreach($all as $a)
+    <h1>Productos del RUT </h1>
         <div class="panel panel-default">
           <div class="panel-body">
-            <a href="{{URL::action('PostsController@show',[$a->rut])}}">
-            {{ $a->rut }}
-          </a>
-            {{ $a->fullName }}
+           	{{$post->id}}
+           	{{$post->amount}}
+			{{$post->type}}
+           	{{$post->status}}
+           	{{$post->limitAmount}}
+
           </div>
       </div>
-      @endforeach
   </div>
-
 
 </body>
 </html>
