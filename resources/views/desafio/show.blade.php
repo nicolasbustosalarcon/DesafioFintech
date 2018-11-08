@@ -26,8 +26,18 @@
                 <td>{{ $p->id }}</td>
                 <td>{{ $p->amount }}</td>
                 <td>{{ $p->type }}</td>
+
                 <td>{{ $p->status }}</td>
                 <td>{{ $p->limitAmount }}</td>
+                @if($p->type == 'CVISTA')
+                <td><a href="{{route('transacciones.show',$p->id)}} "><button class="btn btn-denger">Realizar Transacciones</button></a></td>
+                @endif
+                @if($p->type == 'CTD')
+                  <td><a href="{{route('transacciones.show',$p->id)}} "><button class="btn btn-denger">Realizar Transacciones</button></a></td>
+                @endif
+                @if($p->type == 'TDC')
+                  <td><a href="{{route('transacciones.show',$p->id)}} "><button class="btn btn-denger">Mis Transacciones</button></a></td>
+                @endif
               </tr> 
 
             </tbody>

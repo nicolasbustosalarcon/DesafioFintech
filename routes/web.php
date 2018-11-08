@@ -20,7 +20,7 @@ route::get('/usuarios','PostsController@index');
 route::resource('usuario','PostsController');
 route::get('/usuarios/{rut}','PostsController@show');
 
-route::get('/busqueda','PostsController@busqueda');
+route::resource('/transacciones','TransaccionesController');
 
 
 
